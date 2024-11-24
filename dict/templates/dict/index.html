@@ -15,40 +15,48 @@
 <body>
 
     <br>
-    <a href="{% url 'phrases' %}">phrases</a>
+    <a href="{% url 'phrases' %}">Рандом зборови</a>
     <br>
     <br>
 
     <table>
+
         <tr>
             <th></th>
-            <th>Español</th>
-            <th>significación</th>
+            <th>Шпански</th>
+            <th>Каталонски</th>
+            <th>Значење</th>
         </tr>
+
         {% for tuple in vars %}
             <tr>
                 <td>
-                    <button onclick="revealContent('{{ forloop.counter }}')">Revelalo</button>
+                    <button onclick="revealContent('{{ forloop.counter }}')">Откриј</button>
                 </td>
                 <td>
-                    <span id="tuple-0-{{ forloop.counter }}" class="hidden-content">{{ tuple.0 }}</span>
+                    <span id="tuple-esp-{{ forloop.counter }}" class="hidden-content">{{ tuple.0 }}</span>
                 </td>
-
-                <td>{{ tuple.1 }}</td>
+                <td>
+                    <span id="tuple-cat-{{ forloop.counter }}" class="hidden-content">{{ tuple.1 }}</span>
+                </td>
+                <td>{{ tuple.2 }}</td>
             </tr>
-            
         {% endfor %}
     </table>
-
+    
     <script>
         function revealContent(id) {
-            var element = document.getElementById('tuple-0-' + id);
-            if (element.style.display === 'none' || element.style.display === '') {
-                element.style.display = 'inline';
+            var espElement = document.getElementById('tuple-esp-' + id);
+            var catElement = document.getElementById('tuple-cat-' + id);
+    
+            if (espElement.style.display === 'none' || espElement.style.display === '') {
+                espElement.style.display = 'inline';
+                catElement.style.display = 'inline';
             } else {
-                element.style.display = 'none';
+                espElement.style.display = 'none';
+                catElement.style.display = 'none';
             }
         }
     </script>
-</body>
-</html>
+
+</body> 

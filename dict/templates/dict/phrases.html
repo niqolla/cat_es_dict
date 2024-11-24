@@ -4,10 +4,36 @@
     <title>Recenici</title>
 </head>
 <body>
-    <h3>Random zborovi</h3>
-    {% for zbor in zborovi %}
-        <li>{{ zbor.0 }}</li>
-    {% endfor %}
+
+    <br>
+    <a href="{% url 'index' %}">Дома</a>
+    <br>
+    <br>
+
+    <h3>Рандом зборови</h3>
+
+    <table>
+
+        <tr>
+            <th>Шпански</th>
+            <th>Каталонски</th>
+        </tr>
+        
+        <tr>
+            <td>    
+                {% for zbor in zborovi %}
+                <li>{{ zbor.0 }}</li>
+                {% endfor %}
+            </td>
+            <td>
+                {% for zbor in zborovi %}
+                <li>{{ zbor.1 }}</li>
+                {% endfor %}
+            </td>
+        </tr>
+    </table>
+
+
 
 </body>
 </html>
