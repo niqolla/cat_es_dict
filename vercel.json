@@ -2,26 +2,19 @@
     "version": 2,
     "builds": [
       {
-        "src": "cat_es_dict/wsgi.py",
+        "src": "katalog/wsgi.py",
         "use": "@vercel/python",
         "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
       },
       {
         "src": "build_files.sh",
-        "use": "@vercel/static-build",
-        "config": {
-          "distDir": "staticfiles_build"
-        }
+        "use": "@vercel/static-build"
       }
     ],
     "routes": [
       {
-        "src": "/static/(.*)",
-        "dest": "/static/$1"
-      },
-      {
         "src": "/(.*)",
-        "dest": "cat_es_dict/wsgi.py"
+        "dest": "katalog/wsgi.py"
       }
     ]
   }
