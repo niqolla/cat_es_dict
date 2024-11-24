@@ -1,0 +1,92 @@
+{% extends 'app/main.html' %}
+{% load static %}
+
+{% block title %}Turbini{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+
+        {% if nema_rez == True %}
+            <h5 style="padding-top: 30px;">
+                Nismo pronašli rezultate za vašu pretragu. Pokušajte da tražite u svim ariklima ili nas kontaktirajte (kontakt ispod).
+            </h5>
+            
+            {% include "app/turbini_form.html" %}
+
+        {% else %}
+            <div style="margin-top: 30px;">
+                {% for rez_list in turbini_LoL%}
+
+                <div class="card" style="margin-bottom: 30px;">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-4">
+                            <div class="d-flex" >
+                                <img src="{% static '/images/turbini/'|add:rez_list.0|add:'.png' %}" style="max-height: 100%; width:auto;" class="img-fluid rounded-start" alt="">
+                            </div>
+                        </div>
+            
+                        <div class="col-8">
+                            <div class="card-body">
+                                <h4 style="text-align: center;">JRONE sifra: <strong>{{rez_list.0}}</strong></h4>
+                                <div class="row">
+                                    <div class="col">
+                                        <table class="table">
+                                            <tr>
+                                                <th>MARKA</th>
+                                                <td>{{rez_list.1}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>MODEL</th>
+                                                <td>{{rez_list.2}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>CCM</th>
+                                                <td>{{rez_list.3}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>SNAGA</th>
+                                                <td>{{rez_list.4}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>MOTOR</th>
+                                                <td>{{rez_list.5}}</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="col">
+                                        <table class="table">
+                                            <tr>
+                                                <th>GODINA</th>
+                                                <td>{{rez_list.6}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>MODEL TURBINE</th>
+                                                <td>{{rez_list.7}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>OE 1</th>
+                                                <td>{{rez_list.8}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>OE 2</th>
+                                                <td>{{rez_list.9}}</td>
+                                            </tr>
+
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+        {% endif %}
+
+    </div>
+{% endblock %}

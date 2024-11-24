@@ -1,0 +1,134 @@
+{% extends 'app/main.html' %}
+{% load static %}
+
+{% block title %}Pretraga{% endblock %}
+
+{% block content %}
+
+    {% if isti_rezultati == None %}
+        
+    {% endif %}
+
+
+    <div class="container">
+
+        {% if nema_rezultati %}
+            <h5 style="padding-top: 30px;">
+                Nismo pronašli rezultate za vašu pretragu. <br><strong>
+                Pokušajte opet ili nas kontaktirajte (kontakt ispod).
+                </strong>
+            </h5>
+
+        {% endif %}
+
+        {% if isti_rezultati %}
+
+            <h3 style="padding-top: 30px; 
+            color: var(--primary);
+            padding-bottom: 10px;
+            font-weight: bold;">
+                Rezultati
+            </h3>
+
+            <div style="padding-left: 20px; padding-bottom: 10px;">
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <img src="{% static '/images/imgs/arrow_down.png' %}" alt="" width="40px">
+                    </div>
+                    <div class="col">
+                        <p style="color: var(--primary);"><strong>
+                            Za više informacija kliknite na dugme</strong></p>
+                    </div>
+                </div>
+            </div>            
+
+            <table class="table table-striped">
+
+                <tr>
+                    <th>BROJ</th>
+                    <th>Proizvođač</th>
+                    <th>Model</th>
+                    <th class="d-none d-md-table-cell">OEM</th>
+                    <th class="d-none d-lg-table-cell">Brend</th>
+                    <th class="d-none d-xl-table-cell">Model</th>
+                    <th class="d-none d-xl-table-cell">Motor</th>
+                </tr>
+
+
+                {% for artikl in isti_rezultati %}
+                    <tr>
+                        <td>
+                            <a href="{% url 'artikl_info' artikl.0 %}">
+                                <button type="button" class="btn btn-outline-primary">{{artikl.0}}</button>
+                            </a>
+                        </td>
+                        <td>{{artikl.1}}</td>
+                        <td>{{artikl.2}}</td>
+                        <td class="d-none d-md-table-cell">{{artikl.3}}</td>
+                        <td class="d-none d-lg-table-cell">{{artikl.4}}</td>
+                        <td class="d-none d-xl-table-cell">{{artikl.5}}</td>
+                        <td class="d-none d-xl-table-cell">{{artikl.6}}</td>
+                    </tr>
+                {% endfor %}
+
+            </table>
+
+        {% endif %}
+
+        {% if not isti_rezultati %}
+            <div style="padding-bottom: 30px;"></div>
+        {% endif %}
+
+        {% if slicni_rezultati %}
+            <h3 style="color: var(--primary);
+            padding-bottom: 10px;
+            font-weight: bold;">Slični rezultati</h3>
+
+            <div style="padding-left: 20px; padding-bottom: 10px;">
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <img src="{% static '/images/imgs/arrow_down.png' %}" alt="" width="40px">
+                    </div>
+                    <div class="col">
+                        <p style="color: var(--primary);"><strong>
+                            Za više informacija kliknite na dugme</strong></p>
+                    </div>
+                </div>
+            </div>            
+
+            <table class="table table-striped">
+
+                <tr>
+                    <th>BROJ</th>
+                    <th>Proizvođač</th>
+                    <th>Model</th>
+                    <th class="d-none d-md-table-cell">OEM</th>
+                    <th class="d-none d-lg-table-cell">Brend</th>
+                    <th class="d-none d-xl-table-cell">Model</th>
+                    <th class="d-none d-xl-table-cell">Motor</th>
+                </tr>
+            
+            
+                {% for artikl in slicni_rezultati%}
+                    <tr>
+                        <td>
+                            <a href="{% url 'artikl_info' artikl.0 %}">
+                                <button type="button" class="btn btn-outline-primary">{{artikl.0}}</button>
+                            </a>
+                        </td>
+                        <td>{{artikl.1}}</td>
+                        <td>{{artikl.2}}</td>
+                        <td class="d-none d-md-table-cell">{{artikl.3}}</td>
+                        <td class="d-none d-lg-table-cell">{{artikl.4}}</td>
+                        <td class="d-none d-xl-table-cell">{{artikl.5}}</td>
+                        <td class="d-none d-xl-table-cell">{{artikl.6}}</td>
+                    </tr>
+                {% endfor %}
+            
+            </table>   
+
+        {% endif %}
+    
+    </div>
+
+{% endblock %}

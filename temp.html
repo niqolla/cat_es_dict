@@ -1,0 +1,63 @@
+
+<div class="table-responsive">
+    <table class="table table-striped">
+
+            <tr>
+                <th>Turbo Maker OE</th>
+                <th>Proizvođač</th>
+                <th>Turbo Model</th>
+                <th>OEM broj</th>
+                <th>Brend vozila</th>
+                <th>Model vozila</th>
+                <th>Motor</th>
+                <th>Godina</th>
+                <th>Kompletan turbo kod</th>
+                <th>Gasket kits</th>
+                <th>CHRA</th>
+                <th>SW</th>
+                <th>CW</th>
+                <th>Nazadna ploca</th>
+                <th>Thrust flinger</th>
+                <th>Thrust bearing</th>
+                <th>Journal bearing</th>
+                <th>Bearing housing</th>
+                <th>Akruator</th>
+                <th>Turbine housing</th>
+                <th>Compressor housing</th>
+                <th>Varijabilna geometrija</th>
+                <th>Set za popravka</th>
+            </tr>
+
+
+            {% for artikl in isti_rezultati%}
+                <tr>
+                    <td>{{artikl.turbo_maker_oe_no}}</td>
+                    <td>{{artikl.turbo_maker}}</td>
+                    <td>{{artikl.turbo_model}}</td>
+                    <td>{{artikl.vehicle_oem_number}}</td>
+                    <td>{{artikl.vehicle_brand}}</td>
+                    <td>{{artikl.vehicle_model}}</td>
+                    <td>{{artikl.engine}}</td>
+                    <td>{{artikl.year}}</td>
+                    <td>{{artikl.complete_turbo_code}}</td>
+                    <td>{{artikl.gasket_kits}}</td>
+                    <td>{{artikl.chra}}</td>
+                    <td>{{artikl.sw}}</td>
+                    <td>{{artikl.cw}}</td>
+                    <td>{{artikl.back_plate}}</td>
+                    <td>{{artikl.thrust_flinger}}</td>
+                    <td>{{artikl.thrust_bearing}}</td>
+                    <td>{{artikl.journal_bearing}}</td>
+                    <td>{{artikl.bearing_housing}}</td>
+                    <td>{{artikl.actuator}}</td>
+                    <td>{{artikl.turbo_maker_oe_no}}</td>
+                    <td>{{artikl.turbine_housing}}</td>
+                    <td>{{artikl.compressor_housing}}</td>
+                    <td>{{artikl.nozzle_ring_assembly}}</td>
+                    <td>{{artikl.repair_kits}}</td>
+                </tr>
+            {% endfor %}
+
+    
+    </table>
+</div>

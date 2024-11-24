@@ -1,0 +1,174 @@
+{% extends 'app/main.html' %}
+{% load static %}
+
+{% block title %}Simptomi kvara turbine{% endblock %}
+
+
+{% block content %}
+
+<div class="album py-5">
+  <div class="container">
+
+    <h1 style="color: var(--secondary);"><strong>Simptomi kvara turbine</strong></h1>
+    <h4 style="color: var(--primary);">6 indikatora koji govore da je turbo u problemu</h4>
+
+    <p>Kao i većina delova, turbokompresor nije imun na kvarove. 
+      Istražili smo šest najčešćih simptoma koji ukazuju na <strong>kvar na turbini</strong>, 
+      tako da možete lako da proverite da li je turbina u kvaru ili se radi o nekom 
+      drugom problemu. Bitno je da proverite da li su simptomi vezani za turbo pre nego 
+      što krenete u popravku, kako ne biste napravili dodatnu štetu na vozilu.</p>
+    
+    <div class="container" style="max-width: 90%;"> 
+
+      <!-- 1  -->
+      <h2 style="color: var(--primary);
+      padding-top: 30px;"><strong>1. Upaljena lampica za motor (Check Engine)</strong>
+        </h2>
+      <div class="row" style="padding-top: 20px;">
+        <div class="col-md-3 col-sm-12">
+          <div class="d-flex justify-content-center">
+            <img src="{% static 'images/imgs/informacije/simptomi_kvara_turbine/1_check_engine.webp' %}" 
+            alt="" width="100px" style="border-radius: 10px;">
+          </div>
+        </div>
+        <div class="col-md-9 col-sm-12" style="padding-top: 20px;">
+          <p>
+            Iako je lampica koja pokazuje grešku na motoru sveobuhvatan znak upozorenja koji neće
+            posebno upućivati na bilo kakve mehaničke probleme, ona ipak može značiti: <strong>kvar 
+            turbokompresora</strong>. Ako se dogodi kvar na turbini, indikator (lampica) bi trebao da se upali na 
+            vašoj kontrolnoj tabli. 
+          </p>
+        </div>
+      </div>
+      <!-- /1 -->
+
+      <!-- 2  -->
+      <h2 style="color: var(--primary);
+      padding-top: 30px;"><strong>2. Povećana potrošnja</strong>
+      </h2>
+      <div class="row" style="padding-top: 20px;">
+        <div class="col-md-3 col-sm-12">
+          <div class="d-flex justify-content-center">
+            <img src="{% static 'images/imgs/informacije/simptomi_kvara_turbine/2_empty_tank.jpg' %}" 
+            alt="" width="100px" style="border-radius: 10px;">
+          </div>
+        </div>
+        <div class="col-md-9 col-sm-12" style="padding-top: 20px;">
+          <p>
+            Druga glavna funkcija turbine je ekonomičnija potrošnja goriva. Češća dopunjavanja 
+            rezervoara i/ili primetno smanjenje kilometraže vozila po sipanju mogu ukazivati na 
+            neispravan turbo. Potencijalni uzrok kvara: <strong>sirovo gorivo koje nije sagoreno curi</strong> iz 
+            turbine u izduvni sistem. 
+          </p>
+        </div>
+      </div>
+      <!-- /2 -->
+
+      <!-- 3  -->
+      <h2 style="color: var(--primary);
+      padding-top: 30px;"><strong>3. Sporo ubrzavanje</strong>
+      </h2>
+      <div class="row" style="padding-top: 20px;">
+        <div class="col-md-3 col-sm-12">
+          <div class="d-flex justify-content-center">
+            <img src="{% static 'images/imgs/informacije/simptomi_kvara_turbine/3_less_speed.webp' %}" 
+            alt="" width="100px" style="border-radius: 10px;">
+          </div>
+        </div>
+        <div class="col-md-9 col-sm-12" style="padding-top: 20px;">
+          <p>
+            Primarna funkcija turbine je povećanje snage motora. Loše ubrzanje izjednačava se 
+            sa smanjenom snagom, gde bi krivac sasvim sigurno mogao biti turbo. Ako dobijete 
+            <strong>zakasneli odgovor</strong> automobila kada nagazite gas pedalu ili se ne podudara sa brzinom 
+            na koju ste navikli, posavetujte se sa mehaničarom vezano za ovaj problem.
+          </p>
+        </div>
+      </div>
+      <!-- /3 -->
+
+
+      <!-- 4  -->
+      <h2 style="color: var(--primary);
+      padding-top: 30px;"><strong>4. Zviždanje turbine</strong>
+      </h2>
+      <p>
+        <strong>Zašto turbina zviždi?</strong> Kvar na turbini može rezultirati glasnim zviždukom pri gasu, 
+        koji dolazi iz motora (turbine). Što je glasniji zvuk, to bi problem mogao biti 
+        gori. <strong>Zvuk proizvodi oštećeno kompresorsko kolo turbo kompresora</strong>. Oštećenje nastaje 
+        ukoliko strano telo uleti u turbinu pri radu ili ako turbina ima aksijalnog ili 
+        radijalnog ‘lufta’.
+      </p>
+      <div class="row" style="padding-top: 20px;">
+        <div class="col-md-3 col-sm-12" style="padding-top: 20px;">
+          <div class="d-flex justify-content-center">
+            <audio controls>
+              <source src="{% static 'images/imgs/informacije/simptomi_kvara_turbine/4_siren_noise.mp3' %}" 
+              type="audio/mp3">
+              Vaš pretraživač ne podržava audio element.
+            </audio>
+          </div>
+        </div>
+        <div class="col-md-9 col-sm-12" style="padding-top: 20px;">
+          
+          <p>
+            Ovde smo okačili zvuk koji motor pravi, kako biste mogli da uporedite. 
+            Ako čujete ovaj zvuk, trebalo bi što pre da se obratite svom 
+            mehaničaru da vam proveri vozilo.
+          </p>
+        </div>
+      </div>
+      <!-- /4 -->
+
+      <!-- 5  -->
+      <h2 style="color: var(--primary);
+      padding-top: 30px;"><strong>5. Prekomerni izduvni gasovi</strong>
+      </h2>
+      <div class="row" style="padding-top: 20px;">
+        <div class="col-md-3 col-sm-12">
+          <div class="d-flex justify-content-center">
+            <img src="{% static 'images/imgs/informacije/simptomi_kvara_turbine/5_prekumerno_gas.png' %}" 
+            alt="" width="100px" style="border-radius: 10px;">
+          </div>
+        </div>
+        <div class="col-md-9 col-sm-12" style="padding-top: 20px;">
+          <p>
+            Turbina je dizajnirana tako da dramatično smanji količinu dima koji izlazi 
+            iz izduvne cevi. Prekomerni dim je simptom neispravnog turbo sistema – <strong>pukotine 
+            na kućištu</strong> turbine mogu izazvati curenje ulja izduvni sistem i dramatično 
+            povećati proizvodnju dima. Ako naiđete na ovaj problem, odmah se obratite 
+            svom mehaničaru za svoj turbo.
+          </p>
+        </div>
+      </div>
+      <!-- /5 -->
+
+      <!-- 6  -->
+      <h2 style="color: var(--primary);
+      padding-top: 30px;"><strong>6. Plavi ili crni dim</strong>
+      </h2>
+      <div class="row" style="padding-top: 20px;">
+        <div class="col-md-3 col-sm-12">
+          <div class="d-flex justify-content-center">
+            <img src="{% static 'images/imgs/informacije/simptomi_kvara_turbine/6_black_gas.png' %}" 
+            alt="" width="100px" style="border-radius: 10px;">
+          </div>
+        </div>
+        <div class="col-md-9 col-sm-12" style="padding-top: 20px;">
+          <p>
+          <strong>Curenje ulja</strong> u komori za sagorevanje, koje je rezultat puknutog turbo kućišta, može dovesti do 
+          ispuštanja plavog dima iz vaše izduvne cevi. S druge strane, crni dim mogu da izazovu pregoreli 
+          motor, začepljen vazdušni filter, začepljeni kanal za usis vazduha na turbo kompresoru ili kvar 
+          na mlaznicama goriva vašeg motora. Bez obzira na razlog, obojeni dim nikada nije dobar znak i 
+          automobil biste odmah trebali odvesti na servis.
+          </p>
+        </div>
+      </div>
+      <!-- /6 -->
+
+      {% include 'app/informacije/ukoliko-ima-problema.html' %}
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+<div
+style="background-color: var(--primary);
+padding-top: 20px;
+padding-bottom: 20px;">
+    <div class="container" id="pretraga-form">
+        <h4 style="color: white; text-align: left; padding-bottom: 3px;">Pretraga sve artikle:</h4>
+        <form class="d-flex" role="search" action="{% url 'pretraga' %}" method="get">
+            <input name="query" class="form-control me-2" type="search" 
+            placeholder="OE broj: 5304-970-0019 / 751578-0002 / 4037336 ... " 
+             aria-label="OE broj: 5304-970-0019 / 751578-0002 / 4037336 ... " 
+            style="margin-right: 30px;">
+            <!-- <input name="OEM" class="form-control me-2" type="search" 
+            placeholder="OEM broj: 55191597 / 03G253019JV710 / A6600900680 ... " 
+             aria-label="OEM broj: 55191597 / 03G253019JV710 / A6600900680 ... " 
+            style="margin-right: 30px;"> -->
+            <button class="btn btn-secondary" type="submit">Pretraga</button>
+        </form>
+    </div>
+</div>
+

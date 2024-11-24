@@ -1,0 +1,184 @@
+{% extends 'app/main.html' %}
+
+{% block content %}
+
+    <div class="container">
+
+        <h3 style="color: var(--primary); font-weight: bold; padding-top: 30px;">
+            {{ original_query }}
+        </h3>
+
+        <div class="table-responsive" style="padding-top: 30px;">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Turbo Maker OE</th>
+                        {% for artikl in isti_rezultati %}
+                            <td style="font-weight: bold;" class="compare-cell">{{ artikl.0 }}</td>
+                        {% endfor %}
+                        
+                    </tr>
+                </thead>
+                
+                <tr>
+                    <th>Proizvođač</th>
+                    {% for artikl in isti_rezultati %}
+                        <td class="compare-cell">{{ artikl.1 }}</td>
+                    {% endfor %}
+                </tr>
+
+                <tr>
+                    <th>Turbo Model</th>
+                    {% for artikl in isti_rezultati %}
+                        <td class="compare-cell">{{ artikl.2 }}</td>
+                    {% endfor %}
+                </tr>
+
+                <tr>
+                    <th>OEM broj</th>
+                    {% for artikl in isti_rezultati %}
+                        <td class="compare-cell">{{ artikl.3 }}</td>
+                    {% endfor %}
+                </tr>
+
+                <tr>
+                    <th>Brend vozila</th>
+                    {% for artikl in isti_rezultati %}
+                        <td>{{ artikl.4 }}</td>
+                    {% endfor %}
+                </tr>
+                
+                <tr>
+                    <th>Model vozila</th>
+                    {% for artikl in isti_rezultati %}
+                        <td>{{ artikl.5 }}</td>
+                    {% endfor %}
+                </tr>
+                
+                <tr>
+                    <th>Motor</th>
+                    {% for artikl in isti_rezultati %}
+                        <td>{{ artikl.6 }}</td>
+                    {% endfor %}
+                </tr>
+                        
+                <tr>
+                    <th>Godina</th>
+                    {% for artikl in isti_rezultati %}
+                        <td>{{ artikl.7 }}</td>
+                    {% endfor %}
+                </tr>
+                                        
+                <tr>
+                    <th>Kompletan turbo kod</th>
+                    {% for artikl in isti_rezultati %}
+                        <td>{{ artikl.8 }}</td>
+                    {% endfor %}
+                </tr>
+
+                <tr>
+                    <th>Set zaptivača</th>
+                    {% for artikl in isti_rezultati %}
+                        <td>{{ artikl.9 }}</td>
+                    {% endfor %}
+                </tr>
+                        
+                <tr>
+                    <th>Centralni sklop</th>
+                    {% for artikl in isti_rezultati %}
+                        <td>{{ artikl.10 }}</td>
+                    {% endfor %}
+                </tr>
+                        
+                <tr>
+                    <th>Turbinsko kolo</th>
+                    {% for artikl in isti_rezultati %}
+                        <td>{{ artikl.11 }}</td>
+                    {% endfor %}
+                </tr>
+                        
+                <tr>
+                    <th>Kompresorsko kolo</th>
+                    {% for artikl in isti_rezultati %}
+                        <td>{{ artikl.12 }}</td>
+                    {% endfor %}
+                </tr>
+                        
+                <tr>
+                    <th>Zadnja ploča</th>
+                    {% for artikl in isti_rezultati %}
+                        <td>{{ artikl.13 }}</td>
+                    {% endfor %}
+                </tr>
+                        
+                <tr>
+                    <th>Čaura</th>
+                    {% for artikl in isti_rezultati %}
+                        <td>{{ artikl.14 }}</td>
+                    {% endfor %}
+                </tr>
+                        
+                <tr>
+                    <th>Aksijalni ležaj</th>
+                    {% for artikl in isti_rezultati %}
+                        <td>{{ artikl.15 }}</td>
+                    {% endfor %}
+                </tr>
+                        
+                <tr>
+                    <th>Klizni ležaj</th>
+                    {% for artikl in isti_rezultati %}
+                        <td>{{ artikl.16 }}</td>
+                    {% endfor %}
+                </tr>
+
+                <tr>
+                    <th>Kućište ležaja</th>
+                    {% for artikl in isti_rezultati %}
+                        <td>{{ artikl.17 }}</td>
+                    {% endfor %}
+                </tr>
+
+                <tr>
+                    <th>Aktuator</th>
+                    {% for artikl in isti_rezultati %}
+                        <td>{{ artikl.18 }}</td>
+                    {% endfor %}
+                </tr>
+
+                <tr>
+                    <th>Kućište turbine</th>
+                    {% for artikl in isti_rezultati %}
+                        <td>{{ artikl.19 }}</td>
+                    {% endfor %}
+                </tr>
+
+                <tr>
+                    <th>Kompresorsko kućište</th>
+                    {% for artikl in isti_rezultati %}
+                        <td>{{ artikl.20 }}</td>
+                    {% endfor %}
+                </tr>
+
+                <tr>
+                    <th>Geometrija</th>
+                    {% for artikl in isti_rezultati %}
+                        <td>{{ artikl.21 }}</td>
+                    {% endfor %}
+                </tr>
+
+                <tr>
+                    <th>Set za popravka</th>
+                    {% for artikl in isti_rezultati %}
+                        <td>{{ artikl.22 }}</td>
+                    {% endfor %}
+                </tr>
+                
+            </table>
+
+        </div>
+        
+    </div>
+    
+
+{% endblock %}

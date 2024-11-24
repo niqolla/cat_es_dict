@@ -1,0 +1,217 @@
+{% extends 'app/main.html' %}
+{% load static %}
+
+{% block title %}Kako funkcioniše turbo{% endblock %}
+
+
+{% block content %}
+
+<div class="album py-5">
+  <div class="container">
+
+    <h1 style="color: var(--secondary);
+    padding-top: 10px;"><strong>Kako funkcioniše turbo</strong></h1>
+    <h3 style="color: var(--primary);"><strong>Osnovne karakteristike 
+      turbokompresora</strong></h3>
+
+    <p>
+      <strong>Turbo</strong>, <strong>turbopunjač</strong> ili 
+      <strong>turbina</strong> je komponenta sistema motora sa
+      unutrašnjim sagorevanjem. Ima ulogu u dopremanju dodatnog (kompresovanog) 
+      vazduha u komore za sagorevanje motora. Vazduh kompresovan u turbopunjaču 
+      sadrži veću koncentraciju kiseonika, što omogućava znatno poboljšano sagorevanje, 
+      što znači: veća snaga, čistije emisije, poboljšan obrtni moment motora i smanjenje 
+      gubitka ubrizgavanja u motoru nudeći svestrano bolje performanse vozilu ili mašini. 
+    </p>
+
+
+    <h1 style="color: var(--secondary);
+    padding-top: 40px;"><strong>Osnovni delovi i mehanika turbine</strong></h1>
+    <h3 style="color: var(--primary);"><strong>Glavne komponente i 
+      princip rada turbine</strong></h3>
+
+    
+    <div class="row">
+      <div class="col-xl-6 col-md-12">
+        <div class="d-flex justify-content-center">
+          <img src="{% static '/images/imgs/informacije/kako_funkcionise_turbo/1.webp' %}" 
+            alt="" width="400px">
+        </div>  
+        <p>
+          <strong>Westgate</strong> turbine su turbine sa ventilom koji kontroliše protok izduvnih 
+          gasova kroz turbinsko kolo. Preusmeravanje izduvnih gasova reguliše brzinu 
+          rada turbine, što zauzvrat reguliše brzinu rotacije kompresora. Primarna 
+          funkcija westgate-a je da <strong>reguliše maksimalni potisni pritisak</strong>, a time i 
+          da zaštiti motor i turbokompresor.
+        </p>
+
+        <div class="card">
+          <div class="card-body">
+            <p>
+              Potisni pritisak se kontroliše regulisanjem količine izduvnih gasova 
+              koji prolaze kroz turbinsko kolo. Protok izduvnih gasova u turbini 
+              kontroliše se preko aktuatora, koga pokreće vakuumska ili električna 
+              jedinica. 
+            </p>
+
+            <p>
+              Snabdevanje vazduhom za kontrolu westgate aktuatora vrši pritisak 
+              nastao u samoj turbini ili vakuumskim pritiskom (iz vakuum pumpe vozila). 
+              Nedostatak potisnog pritiska je taj što kontrola odvodnog otvora zavisi od 
+              opterećenja motora (potisnog pritiska).
+            </p>
+
+            <p>
+              Noviji turbopunjači imaju tehnologiju direktnog električnog aktiviranja 
+              preko aktuatora. Ovo donosi brže i preciznije aktiviranje westgate ventila, 
+              nezavisno od radnog stanja motora.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-6 col-md-12">
+        <br>
+        <p>
+          <strong>VNT</strong> ili turbine sa <strong>varijabilnom geometrijom</strong> su punjači novije generacije. 
+          Ova geometrija, koja se nalazi u centralnom kućištu turbine, omogućava kontrolisan 
+          protok vazduha kroz turbinu. Pokretne lopatice varijabilne geometrije zadržavaju 
+          rasipanje protoka vazduha kroz turbinu, time povećavajući snagu kompresije turbine i 
+          njen potisni pritisak.
+        </p>
+        <div class="d-flex justify-content-center">
+          <img src="{% static '/images/imgs/informacije/kako_funkcionise_turbo/2.webp' %}" 
+            alt="" width="400px">
+        </div>
+        <div class="container" style="max-width: 70%;">
+          <div class="card">
+            <div class="card-body">
+              <ol>
+                <li>turbinsko kolo</li>
+                <li>kućište turbine</li>
+                <li>ulaz izduvnih gasova</li>
+                <li>izlaz izduvnih gasova</li>
+                <li>kompresorsko kolo</li>
+                <li>kompresorsko kućište </li>
+                <li>sistem ležaja</li>
+                <li>izlaz kompresovanog vazduha</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h1 style="color: var(--secondary); 
+    padding-top: 40px;"><strong>Kako funkcioniše turbina</strong></h1>
+    <h3 style="color: var(--primary);"><strong>U sklopu motornog sistema</strong></h3>
+
+    <div class="row">
+      <div class="col-xl-6 col-md-12">
+        <div class="d-flex justify-content-center">
+          <img src="{% static '/images/imgs/informacije/kako_funkcionise_turbo/3.gif' %}" 
+            alt="" width="400px">
+        </div>
+      </div>
+      <div class="col-xl-6 col-md-12">
+        <p>
+          Osnovni princip rada turbine je <strong>kompresija vazduha</strong> koja nastavlja ka cilindru motora. 
+          Kompresovan vazduh omogućava motoru efikasnije i jače sagorevanje. Glavni benefit motora koji koristi 
+          turbo je povećana snaga bez dodatnog opterećenja mase vozila. Vozila sa motorima manje kubikaže na ovaj 
+          način uspevaju da dostignu veću snagu i iskoriste potencijal efikasnije potrošnje.
+        </p>
+        <div class="card">
+          <div class="card-body">
+            <p>
+              Pojednostavljeno, turbina je vrsta vazdušne pumpe koja preuzima vazduh pod pritiskom okoline komprimira 
+              ga na viši pritisak i tako koncentrovan kiseonikom vazduh propušta do motora kroz ulazne ventile.
+            </p>
+            <p>
+              Takav vazduh prolazi kroz <strong>interkuler</strong> koji ga hladi pre ulaska u motor. Nakon procesa 
+              sagorevanja, izduvni gas prolazi kroz turbinsko kolo, zadajući veći obrtni moment, nakon čega napušta sistem.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h1 style="color: var(--secondary);
+    padding-top: 40px;"><strong>Benefit vozila</strong></h1>
+    <h3 style="color: var(--primary);"><strong>Sa kvalitetnim turbo sistemom</strong></h3>
+    <p>
+      Vozilo koje koristi kvalitetan i očuvan turbo sistem u motoru ima osetno bolji performans i efikasniju potrošnju 
+      goriva. Važno je voditi računa da ne postoje smetnje u dovodu i odvodu vazduha i ulja kako bi sistem funkcionisao neometano. 
+    </p>
+
+    <h4 style="color: var(--primary);"><strong>Poboljšan Performans</strong></h4>
+    <div class="container" style="max-width: 95%;">
+      <p>
+        Turbokompresor usisava vazduh koji kompresuje ka sagorevajućoj komori motora, što oslobađa veću snagu motora.
+      </p>
+      <li style="text-align: center;">
+        (%) snaga motora sa turbinom
+      </li>
+      
+      <div class="progress" style="height: 25px;">
+        <div class="progress-bar " role="progressbar"
+        aria-valuenow="42" aria-valuemin="0" aria-valuemax="100" style="width:42%; font-size: 11px;">
+          <div class="">
+            <span style="float: left; margin-left: 10px;">dodatna snaga</span>
+            <span style="float: right; margin-right: 10px; 
+            font-weight: bold;">42%</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <h4 style="color: var(--primary); 
+    padding-top: 40px;;"><strong>Povećanje Brzine</strong></h4>
+    <div class="container" style="max-width: 95%;">
+      <p>
+        Dodatna snaga omogućava automobilu veću obrtnu silu tokom dužeg vremenskog perioda.
+      </p>
+      <li style="text-align: center;">
+        (%) brzina u odnosu na motor bez punjača
+      </li>
+                  
+      <div class="progress" style="height: 25px;">
+        <div class="progress-bar" role="progressbar"
+        aria-valuenow="42" aria-valuemin="0" aria-valuemax="100" style="width:63%; font-size: 11px;">
+          <div class="">
+            <span style="float: left; margin-left: 10px;">ubrzanje</span>
+            <span style="float: right; margin-right: 10px;
+            font-weight: bold;">63%</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <h4 style="color: var(--primary); 
+    padding-top: 40px;;"><strong>Efikasna potrošnja</strong></h4>
+    <div class="container" style="max-width: 95%; padding-bottom: 30px;">
+      <p>
+        Sa više vazduha koji dolazi do motora, povećava se efikasnost iskoristivosti energije sagorevanja.
+      </p>
+      <li style="text-align: center;">
+        (%) efikasnost potrošnje pri sagorevanju
+      </li>
+                  
+      <div class="progress" style="height: 25px;">
+        <div class="progress-bar" role="progressbar"
+        aria-valuenow="42" aria-valuemin="0" aria-valuemax="100" style="width:87%; font-size: 11px;">
+          <div class="">
+            <span style="float: left; margin-left: 10px;">efikasnost</span>
+            <span style="float: right; margin-right: 10px;
+            font-weight: bold;">87%</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    {% include 'app/informacije/ukoliko-ima-problema.html' %}
+
+  </div>
+</div>
+{% endblock %}

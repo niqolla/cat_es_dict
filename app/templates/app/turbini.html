@@ -1,0 +1,167 @@
+{% extends 'app/main.html' %}
+{% load static %}
+
+{% block title %}Turbini{% endblock %}
+
+{% block content %}
+
+{% if nema_rez == False %}
+<div class="div" style="padding: 10px;" id="trazite-naslov"></div>
+<div class=""
+style="padding-top: 30px;
+background-color: var(--secondary);
+padding-top: 20px;
+padding-bottom: 15px;">
+
+        <form method="get">
+            <div class="container">
+                <div class="row">
+                    <h2 style="color: white; padding-bottom: 5px;" ><strong>Tražite isključivo turbine:</strong></h2>
+                </div>
+                <div class="row">
+                    <div class="col-10">
+                        <table class="table">
+                            <thead style="color: white;">
+                                <tr>
+                                    <th>MARKA</th>
+                                    <th>CCM</th>
+                                    <th>SNAGA</th>
+                                    <th>ŠIFRA ili OE</th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>{{ turbini_form.auto }}</td>
+                                <td>{{ turbini_form.CCM }}</td>
+                                <td>{{ turbini_form.HP }}</td>
+                                <td>{{ turbini_form.shifra }}</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-2">
+                        <table>
+                            <thead><tr></tr></thead>
+                            <tr>
+                                <td style="text-align: end;">
+                                    <button class="btn btn-primary" type="submit">Pretraga</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+
+                <div class="row" style="padding-top: 10px;" >
+                    
+                </div>
+            </div>
+        </form>
+    </div>
+</div>  
+
+
+
+{% endif %}
+
+    <div class="container">
+
+        {% if nema_rez == True %}
+            <h5 style="padding-top: 30px; padding-bottom: 30px;">
+                Nismo pronašli rezultate za vašu pretragu. <br><strong>
+                Pokušajte da tražite u svim ariklima ili nas kontaktirajte (kontakt ispod).
+                </strong>
+            </h5>
+                    
+            {% include "app/turbini_form.html" %}
+
+        {% else %}
+
+            <div class="d-xl-none">
+                <h6 style="padding-top: 20px; color: var(--primary); text-align: right;
+                "><i>Preporučujemo da pogledate rezultate na računaru ili laptopu jer telefoni neće moći da prikažu sve podatke.</i></h6>
+            </div>
+
+            <div style="margin-top: 30px;">
+            
+                {% for jrone_no_group in grouped_by_jrone_no_LoLoL%}
+
+                <div class="card" style="margin-bottom: 30px;">
+                    <div class="card-body">
+                        <p style="text-align: right; font-weight: bold;">Artikl {{ forloop.counter }} / {{ grouped_by_jrone_no_LoLoL|length }}</p>
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <div class="" >
+                                    <img src="{% static '/images/turbini/'|add:jrone_no_group.0.0|add:'.png' %}" 
+                                    style="max-height: 20%; width:auto; border-radius: 10px;" class="" alt="">
+                                </div>
+                            </div>
+                
+                            <div class="col">
+                                <div class="card-body">
+                                    <h4 style="text-align: center;
+                                    color: var(--secondary);
+                                    font-size:xx-large;"><strong>JRONE sifra: {{jrone_no_group.0.0}}</strong></h4>
+                                    <h4 style="text-align: center;
+                                    color: var(--primary);"><strong>Cena: {{jrone_no_group.0.10}} €</strong></h4>
+                                </div>
+                            </div>    
+                        </div>
+
+                        <div class="row  align-items-center" style="padding-top: 20px;">
+                            <table class="table">
+                                <tr>
+                                    <th>MARKA</th>
+                                    <th>MODEL</th>
+                                    <th>CCM</th>
+                                    <th class="d-none d-md-table-cell">SNAGA</th>
+                                    <th class="d-none d-md-table-cell">MOTOR</th>
+                                    <th class="d-none d-lg-table-cell">GODINA</th>
+                                    <th class="d-none d-lg-table-cell">MODEL TURBINE</th>
+                                    <th class="d-none d-xl-table-cell">OE 1</th>
+                                    <th class="d-none d-xl-table-cell">OE 2</th>
+                                </tr>
+                                {% for artikl in jrone_no_group%}
+                                    <tr>
+                                        <td>{{artikl.1}}</td>
+                                        <td>{{artikl.2}}</td>
+                                        <td>{{artikl.3}}</td>
+                                        <td class="d-none d-md-table-cell">{{artikl.4}}</td>
+                                        <td class="d-none d-md-table-cell">{{artikl.5}}</td>
+                                        <td class="d-none d-lg-table-cell">{{artikl.6}}</td>
+                                        <td class="d-none d-lg-table-cell">{{artikl.7}}</td>
+                                        <td class="d-none d-xl-table-cell">{{artikl.8}}</td>
+                                        <td class="d-none d-xl-table-cell">{{artikl.9}}</td>
+                                    </tr>
+                                {% endfor %}
+                            </table>      
+                        </div>
+                    </div>
+                   
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+            <h5 style="padding-top: 30px; padding-bottom: 30px;">
+                Ako ne možete da pronađete rezultat koji tražite ili imate pitanja, molimo vas da nas kontaktirate.
+            </h5>
+
+        {% endif %}
+
+    </div>
+{% endblock %}
+{% block scripts %}
+<script>
+    // Get the element by its ID
+    var element = document.getElementById('trazite-naslov');
+
+    // Calculate the offset by adding 100 pixels above the element
+    var offset = element.offsetTop - 100;
+
+    // Scroll to the element with a smooth effect
+    window.scrollTo({
+        top: offset,
+        behavior: 'smooth'
+    });
+</script>
+{% endblock scripts %}

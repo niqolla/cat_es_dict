@@ -1,0 +1,589 @@
+{% extends 'app/main.html' %}
+{% load static %}
+
+{% block title %}Instrukcije za montažu{% endblock %}
+
+{% block content %}
+
+<div class="album py-5">
+    <div class="container">
+
+        <h1 style="color: var(--secondary);"><strong>Instrukcije za montažu</strong></h1>
+    
+        <p>Instrukcije korak po korak kako se pravilno vrši montaža turbine. Instrukcije obuhvataju 
+            čitav proces od dijagnostike, preko provere adekvatnosti, faktora koji utiču na rad turbine 
+            i grešaka koje mogu da se dogode. Detaljno smo obradili ceo proces zamene tako da ukoliko 
+            detaljno ispratite instrukcije nećete imati problema. 
+        </p>
+        
+        <div class="container" style="max-width: 90%;"> 
+        
+            <!-- 1  -->
+            <div class="card" style="
+            margin-top: 40px;">
+                <div class="card-body"
+                style="padding: 40px">
+                    <h2 style="color: var(--primary);"><strong>1. Uradite dijagnostiku automobila</strong>
+                    </h2>
+                    <div class="row align-items-center" style="padding-top: 20px;">
+            
+                        <div class="col-md-4 col-sm-12">
+                            <div class="d-flex justify-content-center">
+                                <img src="{% static 'images/imgs/informacije/instrukcije_za_montazu/1.png' %}" 
+                                alt="" width="300px" style="border-radius: 10px;">
+                            </div>  
+                        </div>
+            
+                        <div class="col-md-8 col-sm-12" style="padding-top: 20px;">
+                            <p>
+                                Ukoliko je na kontrolnoj tabli automobila gorela lampica za kvar motora, moguće je da je problem u turbini.
+                            </p>
+                            <ul>
+                                <li>Nedostatak napajanja,</li>
+                                <li>Bučan rad motora,</li>
+                                <li>Prekomerno ispuštanje izduvnih gasova</li>
+                                <li>Potrošnja ulja </li>
+                            </ul>
+                            <p> mogu nastati zbog:</p>
+                            <ul>
+                                <li>neispravnog sistema ubrizgavanja goriva,</li>
+                                <li>problema sa elektrikom,</li>
+                                <li>ograničenim ili blokiranim vazdušnim filterom,</li>
+                                <li>oštećenog izduvnog sistema ili</li>
+                                <li>problema sa podmazivanjem. </li>
+                            </ul>
+                            <p>Ako je moguće proverite pritisak u karteru prema specifikaciji proizvođača motora. Ukoliko se u karteru očita pritisak veći od normalnog, to može indikovati na curenje ulja iz turbo sistena u ulazni izduvni sistem</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /1 -->
+
+            <!-- 2  -->
+            <div class="card" style="
+            margin-top: 40px;">
+                <div class="card-body"
+                style="padding: 40px">
+                    <h2 style="color: var(--primary);"><strong>2. Vizuelni pregled</strong>
+                    </h2>
+                    <div class="row align-items-center" style="padding-top: 20px;">
+            
+                        <div class="col-md-4 col-sm-12">
+                            <div class="d-flex justify-content-center">
+                                <img src="{% static 'images/imgs/informacije/instrukcije_za_montazu/2.png' %}" 
+                                alt="" width="300px" style="border-radius: 10px;">
+                            </div>  
+                        </div>
+            
+                        <div class="col-md-8 col-sm-12" style="padding-top: 20px;">
+                            <p>
+                                Pri pregledu turbine važno je uveriti se da nema: 
+                            </p>
+                            <ul>
+                                <li>stranih objekata</li>
+                                <li>nedostatka podmazivača</li>
+                                <li>kontaminacije ulja</li>
+                                <li>prekoračenja optimalnog broja obrtaja</li>
+                                <li>pregrevanja</li>
+                                <li>Ovakva oštećenja često su simptom a ne uzrok problema.</li>
+                            </ul>
+                            <p> Ukoliko je na kontrolnoj tabli automobila gorela lampica za kvar motora, moguće je da je problem u turbini.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /2 -->
+
+
+            <!-- 3  -->
+            <div class="card" style="
+            margin-top: 40px;">
+                <div class="card-body"
+                style="padding: 40px">
+                    <h2 style="color: var(--primary);"><strong>3. Provera Turbine</strong>
+                    </h2>
+                    <div class="row align-items-center" style="padding-top: 20px;">
+            
+                        <div class="col-md-4 col-sm-12">
+                            <div class="d-flex justify-content-center">
+                                <img src="{% static 'images/imgs/informacije/instrukcije_za_montazu/3.png' %}" 
+                                alt="" width="300px" style="border-radius: 10px;">
+                            </div>  
+                        </div>
+            
+                        <div class="col-md-8 col-sm-12" style="padding-top: 20px;">
+                            <p><i>
+                                ⚠ Ukoliko turbina nije kompatibilna sa motorom vozila, može doći do havarije. 
+                            </i></p>
+                            <div style=" margin-bottom: 20px;">
+                                <form class="d-flex" role="search" action="{% url 'pretraga' %}" method="get">
+                                    <input name="query" class="form-control me-2" type="search" 
+                                    placeholder="5304-970-0019 / 751578-0002 / 4037336 ... " 
+                                    aria-label="5304-970-0019 / 751578-0002 / 4037336 ... " 
+                                    style="margin-right: 30px;">
+                                    <button class="btn btn-primary" type="submit">Pretraga</button>
+                                </form>
+                            </div>
+                            <p>
+                                Proverite poklapanje turbine sa vozilom tako što ćete ukucati u pretragu broj turbine (sa njene pločice) i potvrditi poklapanje sa motorom vozila u karakteristikama. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 3x -->
+
+
+            <!-- 4  -->
+            <div class="card" style="
+            margin-top: 40px;">
+                <div class="card-body"
+                style="padding: 40px">
+                    <h2 style="color: var(--primary);"><strong>4. Uverite se da nema nikakvih nečistoća</strong>
+                    </h2>
+                    <div class="row align-items-center" style="padding-top: 20px;">
+            
+                        <div class="col-md-4 col-sm-12">
+                            <div class="d-flex justify-content-center">
+                                <img src="{% static 'images/imgs/informacije/instrukcije_za_montazu/4.png' %}" 
+                                alt="" width="300px" style="border-radius: 10px;">
+                            </div>  
+                        </div>
+            
+                        <div class="col-md-8 col-sm-12" style="padding-top: 20px;">
+                            <p>
+                                Uverite se da ne postoji bilo kakva nečistoća ili strano telo u ili na turbini. Važno je da montaža turbine protekne bez nečistoća ili ostataka u bilo kom delu turbokompresora.
+                            </p>
+                            <p><i>
+                                ⚠ Ukoliko se bilo kakav ostatak, strano telo ili prljavština nađe u komponenti, može se dogoditi katastrofalna šteta.
+                            </i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /4 -->
+        
+            <!-- 5  -->
+            <div class="card" style="
+            margin-top: 40px;">
+                <div class="card-body"
+                style="padding: 40px">
+                    <h2 style="color: var(--primary);"><strong>5. Koristite odgovarajuće zaptivače</strong>
+                    </h2>
+                    <div class="row align-items-center" style="padding-top: 20px;">
+            
+                        <div class="col-md-4 col-sm-12">
+                            <div class="d-flex justify-content-center">
+                                <img src="{% static 'images/imgs/informacije/instrukcije_za_montazu/5.png' %}" 
+                                alt="" width="300px" style="border-radius: 10px;">
+                            </div>  
+                        </div>
+            
+                        <div class="col-md-8 col-sm-12" style="padding-top: 20px;">
+                            <p>
+                                Središnja rupa zaptivača mora biti savršeno kompatibilna sa središnjom rupom turbo prirubnice. Važno je koristiti zaptivač koji je namenjen turbini koju ugrađujete.
+                            </p>
+                            <p>
+                                Neke turbine koriste konektore umesto zaptivača.
+                            </p>
+                            <p><i>
+                                ⚠ Nemojte koristiti tečne zaptivne mase, posebno ne na dovodu ili odvodu ulja, jer prekomerna masa može ući u turbo i smanjiti ili zaustaviti protok ulja.
+                            </i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /5 -->
+
+            <!-- 6  -->
+            <div class="card" style="
+            margin-top: 40px;">
+                <div class="card-body"
+                style="padding: 40px">
+                    <h2 style="color: var(--primary);"><strong>6. Čisti filteri</strong>
+                    </h2>
+                    <div class="row align-items-center" style="padding-top: 20px;">
+            
+                        <div class="col-md-4 col-sm-12">
+                            <div class="d-flex justify-content-center">
+                                <img src="{% static 'images/imgs/informacije/instrukcije_za_montazu/6.png' %}" 
+                                alt="" width="300px" style="border-radius: 10px;">
+                            </div>  
+                        </div>
+            
+                        <div class="col-md-8 col-sm-12" style="padding-top: 20px;">
+                            <p>
+                                Uverite se da nema začepljenja: 
+                            </p>
+                            <ul>
+                                <li>Važno je da su filter ulja, goriva i vazduha čisti:</li>
+                                <li>Preporučuje se da koristite nove filtere za vazduh, ulje i gorivo. Ako ne koristite nove filtere, uverite se da su postojeći čisti.</li>
+                                <li>Prilikom ugradnje novog ili posle čišćenja filtera za ulje, ako je moguće, napunite ga čistim, svežim motornim uljem. Takođe, ako je dostupan, ponovo napunite potisni vod od pumpe za ulje do filtera. Ovo je posebno važno za motore koji imaju visoku kilometražu, gde cev za pritisak ume da se isprazni tokom zamene ulja.</li>                           
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /6 -->
+
+            <!-- 7  -->
+            <div class="card" style="
+            margin-top: 40px;">
+                <div class="card-body"
+                style="padding: 40px">
+                    <h2 style="color: var(--primary);"><strong>7. Protok vazduha u motoru</strong>
+                    </h2>
+                    <div class="row align-items-center" style="padding-top: 20px;">
+            
+                        <div class="col-md-4 col-sm-12">
+                            <div class="d-flex justify-content-center">
+                                <img src="{% static 'images/imgs/informacije/instrukcije_za_montazu/7.png' %}" 
+                                alt="" width="300px" style="border-radius: 10px;">
+                            </div>  
+                        </div>
+            
+                        <div class="col-md-8 col-sm-12" style="padding-top: 20px;">
+                            <p>
+                                Važno je da vazduh neometano cirkuliše: 
+                            </p>
+                            <p>
+                                Vazdušni filter i njegovo kućište moraju biti potpuno čisti i bez ostataka i stranih tela.
+                            </p>
+                            <p><i>
+                                ⚠ Uverite se da je cev za dovod vazduha prazna i da nema nikakve znake oštećenja pre instalacije turbine.
+                            </i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /7 -->
+
+            <!-- 8  -->
+            <div class="card" style="
+            margin-top: 40px;">
+                <div class="card-body"
+                style="padding: 40px">
+                    <h2 style="color: var(--primary);"><strong>8. Ventilacioni sistem</strong>
+                    </h2>
+                    <div class="row align-items-center" style="padding-top: 20px;">
+            
+                        <div class="col-md-4 col-sm-12">
+                            <div class="d-flex justify-content-center" style="padding-bottom: 10px;">
+                                <img src="{% static 'images/imgs/informacije/instrukcije_za_montazu/8.png' %}" 
+                                alt="" width="300px" style="border-radius: 10px;">
+                            </div>  
+                            <div class="d-flex justify-content-center">
+                                <img src="{% static 'images/imgs/informacije/instrukcije_za_montazu/9.png' %}" 
+                                alt="" width="300px" style="border-radius: 10px;">
+                            </div>  
+                        </div>
+            
+                        <div class="col-md-8 col-sm-12" style="padding-top: 20px;">
+                            <p>
+                                Očistite sistem za ventilaciju:
+                            </p>
+                            <p>
+                                Očistite sistem za odzračivanje motora ( sistem ventilacije kartera) i uverite se da pravilno funkcioniše.
+                            </p>
+                            <p><i>
+                                ⚠Bilo kakve blokade ili kvarovi mogu prouzrokovati visok pritisak u karteru i dovesti do curenja iz turbo sistema u ulazni ili izduvni sistem.
+                            </i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /8 -->
+
+
+            <!-- 9  -->
+            <div class="card" style="
+            margin-top: 40px;">
+                <div class="card-body"
+                style="padding: 40px">
+                    <h2 style="color: var(--primary);"><strong>9. Zamenite zaptivače</strong>
+                    </h2>
+                    <div class="row align-items-center" style="padding-top: 20px;">
+            
+                        <div class="col-md-4 col-sm-12">
+                            <div class="d-flex justify-content-center">
+                                <img src="{% static 'images/imgs/informacije/instrukcije_za_montazu/10.png' %}" 
+                                alt="" width="300px" style="border-radius: 10px;">
+                            </div>  
+                        </div>
+            
+                        <div class="col-md-8 col-sm-12" style="padding-top: 20px;">
+                            <p>
+                                Vodite računa o kompatibilnosti:
+                            </p>
+                            <p><i>
+                                ⚠Uklonite sve stare zaptivače sa izduvnog kolektora i cevi
+                            </i></p>
+                            <p>
+                                Očistite površinu prirubnice i uverite se da je bez oštećenja. Uklonite plastične ili penaste čepove sa turbine.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /9 -->
+
+
+            <!-- 10  -->
+            <div class="card" style="
+            margin-top: 40px;">
+                <div class="card-body"
+                style="padding: 40px">
+                    <h2 style="color: var(--primary);"><strong>10. Montaža turbine</strong>
+                    </h2>
+                    <div class="row align-items-center" style="padding-top: 20px;">
+            
+                        <div class="col-md-4 col-sm-12">
+                            <div class="d-flex justify-content-center">
+                                <img src="{% static 'images/imgs/informacije/instrukcije_za_montazu/11.png' %}" 
+                                alt="" width="300px" style="border-radius: 10px;">
+                            </div>  
+                        </div>
+            
+                        <div class="col-md-8 col-sm-12" style="padding-top: 20px;">
+                            <p>
+                                Instalacija na motor:
+                            </p>
+                            <p>
+                                Postavite turbo na razvodnik ili blok motora pomoću odgovarajuće nove zaptivke ili O-prstena, zatim ponovo prikačite izduvnu cev. Dobro zategnite sve matice i šrafove.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /10 -->
+
+            <!-- 11  -->
+            <div class="card" style="
+            margin-top: 40px;">
+                <div class="card-body"
+                style="padding: 40px">
+                    <h2 style="color: var(--primary);"><strong>11. Odvod ulja</strong>
+                    </h2>
+                    <div class="row align-items-center" style="padding-top: 20px;">
+            
+                        <div class="col-md-4 col-sm-12">
+                            <div class="d-flex justify-content-center">
+                                <img src="{% static 'images/imgs/informacije/instrukcije_za_montazu/12.png' %}" 
+                                alt="" width="300px" style="border-radius: 10px;">
+                            </div>  
+                        </div>
+            
+                        <div class="col-md-8 col-sm-12" style="padding-top: 20px;">
+                            <p>
+                                Instalirajte cev za odvod ulja:
+                            </p>
+                            <p><i>
+                                ⚠Vodite računa da cev nije savijena ili blokirana.
+                            </i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /11 -->
+
+            <!-- 12  -->
+            <div class="card" style="
+            margin-top: 40px;">
+                <div class="card-body"
+                style="padding: 40px">
+                    <h2 style="color: var(--primary);"><strong>12. Dodajte ulje</strong>
+                    </h2>
+                    <div class="row align-items-center" style="padding-top: 20px;">
+            
+                        <div class="col-md-4 col-sm-12">
+                            <div class="d-flex justify-content-center">
+                                <img src="{% static 'images/imgs/informacije/instrukcije_za_montazu/13.png' %}" 
+                                alt="" width="300px" style="border-radius: 10px;">
+                            </div>  
+                            <div class="d-flex justify-content-center">
+                                <img src="{% static 'images/imgs/informacije/instrukcije_za_montazu/13_1.png' %}" 
+                                alt="" width="300px" style="border-radius: 10px;">
+                            </div>  
+                        </div>
+            
+                        <div class="col-md-8 col-sm-12" style="padding-top: 20px;">
+                            <p>
+                                Sipajte motorno ulje:
+                            </p>
+                            <p><i>
+                                Sipajte sveže motorno ulje u turbo punjač kroz otvor za dodavanje ulja koristeći levak.
+                            </i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /12 -->
+
+            <!-- 13  -->
+            <div class="card" style="
+            margin-top: 40px;">
+                <div class="card-body"
+                style="padding: 40px">
+                    <h2 style="color: var(--primary);"><strong>13. Dovod ulja</strong>
+                    </h2>
+                    <div class="row align-items-center" style="padding-top: 20px;">
+            
+                        <div class="col-md-4 col-sm-12">
+                            <div class="d-flex justify-content-center">
+                                <img src="{% static 'images/imgs/informacije/instrukcije_za_montazu/14.png' %}" 
+                                alt="" width="300px" style="border-radius: 10px;">
+                            </div> 
+                        </div>
+            
+                        <div class="col-md-8 col-sm-12" style="padding-top: 20px;">
+                            <p>
+                                Instalirajte cev za dovod ulja:
+                            </p>
+                            <p><i>
+                                ⚠Vodite računa da cev nije savijena ili blokirana.
+                            </i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /13 -->
+        
+            <!-- 14  -->
+            <div class="card" style="
+            margin-top: 40px;">
+                <div class="card-body"
+                style="padding: 40px">
+                    <h2 style="color: var(--primary);"><strong>14. Protok vazduha</strong>
+                    </h2>
+                    <div class="row align-items-center" style="padding-top: 20px;">
+            
+                        <div class="col-md-4 col-sm-12">
+                            <div class="d-flex justify-content-center">
+                                <img src="{% static 'images/imgs/informacije/instrukcije_za_montazu/15.png' %}" 
+                                alt="" width="300px" style="border-radius: 10px;">
+                            </div> 
+                        </div>
+            
+                        <div class="col-md-8 col-sm-12" style="padding-top: 20px;">
+                            <p>
+                                Instalirajte cev za dovod i odvod vazduha:
+                            </p>
+                            <p>
+                                Prikačite cevi za dovod i odvod vazduha za kompresorsko kućište.
+                            </p>
+                            <p><i>
+                                ⚠  Uverite se da su priključci hermetički zatvoreni i da su stezaljke za creva pravilno zategnute.
+                            </i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /14 -->
+            
+            <!-- 15  -->
+            <div class="card" style="
+            margin-top: 40px;">
+                <div class="card-body"
+                style="padding: 40px">
+                    <h2 style="color: var(--primary);"><strong>15. Protok ulja</strong>
+                    </h2>
+                    <div class="row align-items-center" style="padding-top: 20px;">
+            
+                        <div class="col-md-4 col-sm-12">
+                            <div class="d-flex justify-content-center">
+                                <img src="{% static 'images/imgs/informacije/instrukcije_za_montazu/16.png' %}" 
+                                alt="" width="300px" style="border-radius: 10px;">
+                            </div> 
+                        </div>
+            
+                        <div class="col-md-8 col-sm-12" style="padding-top: 20px;">
+                            <p>
+                                Zaverglavajte motor 10-15 sekundi:
+                            </p>
+                            <p>
+                                Zaverglavajte motor 10-15 sekundi bez pokretanja motora.
+                            </p>
+                            <p>
+                                Ako je moguće, onemogućite dovod goriva ili koristite režim ispitivanja kompresije. Ovo pomaže punjenju dovoda ulja u turbopunjač tako što se pune uljni vodovi, filter za ulje i sam turbo pre pokretanja.
+                            </p>
+                            <p><i>
+                                ⚠ Čim se motor pokrene, turbo će raditi u velikom obrtnom momentu, nedostatak podmazivanja u prvih nekoliko sekundi može uništiti turbokompresor ukoliko postoji nedostatak u podmazivanju.
+                            </i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /15 -->
+
+            <!-- 16  -->
+            <div class="card" style="
+            margin-top: 40px;">
+                <div class="card-body"
+                style="padding: 40px">
+                    <h2 style="color: var(--primary);"><strong>16. Usklađivanje</strong>
+                    </h2>
+                    <div class="row align-items-center" style="padding-top: 20px;">
+            
+                        <div class="col-md-4 col-sm-12">
+                            <div class="d-flex justify-content-center">
+                                <img src="{% static 'images/imgs/informacije/instrukcije_za_montazu/17.png' %}" 
+                                alt="" width="300px" style="border-radius: 10px;">
+                            </div> 
+                        </div>
+            
+                        <div class="col-md-8 col-sm-12" style="padding-top: 20px;">
+                            <p>
+                                Ostavite motor da radi u mestu:
+                            </p>
+                            <p>
+                                Pokrenite motor i pustite ga da radi 3-4 minuta kako bi se omogućila pravilna kontrola curenja ulja, goriva ili vazduha.
+                            </p>
+                            <p><i>
+                                ⚠ Ako se tokom pokretanja motora otkrije curenje, odmah rešite problem.
+                            </i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /16 -->
+
+            <!-- 17  -->
+            <div class="card" style="
+            margin-top: 40px;">
+                <div class="card-body"
+                style="padding: 40px">
+                    <h2 style="color: var(--primary);"><strong>17. Provera ulja</strong>
+                    </h2>
+                    <div class="row align-items-center" style="padding-top: 20px;">
+            
+                        <div class="col-md-4 col-sm-12">
+                            <div class="d-flex justify-content-center">
+                                <img src="{% static 'images/imgs/informacije/instrukcije_za_montazu/18.png' %}" 
+                                alt="" width="300px" style="border-radius: 10px;">
+                            </div> 
+                        </div>
+            
+                        <div class="col-md-8 col-sm-12" style="padding-top: 20px;">
+                            <p>
+                                Zaustavite motor i proverite ulje:
+                            </p>
+                            <p>
+                                Proverite da li je ulje u optimalnim granicama na oznaci šipke.
+                            </p>
+                            <p><i>
+                                ⚠ Važno je da nivo ulja nije iznad tačke, jer to može ukazivati na curenje ulja iz turbine u izduvni sistem.
+                            </i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /17 -->
+
+        </div>
+
+    {% include 'app/informacije/ukoliko-ima-problema.html' %}
+
+    </div>
+</div>
+{% endblock %}
